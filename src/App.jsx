@@ -6,7 +6,7 @@ class App extends React.PureComponent {
   render() {
     return (
       <>
-        <h1>Hello World</h1>
+        <h1>Hello Worldd</h1>
       </>
     );
   }
