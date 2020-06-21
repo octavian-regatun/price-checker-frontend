@@ -1,0 +1,18 @@
+language: node_js
+node:
+  - 12.16.3
+cache: npm
+
+install:
+  - npm ci
+
+script: 
+  - npm test
+  - npm install netlify-cli -g
+  - npm run build
+
+deploy:
+  provider: netlify
+  site: $SITE_NAME
+  auth: $NETLIFY_AUTH
+  edge: true # opt in to dpl v2
