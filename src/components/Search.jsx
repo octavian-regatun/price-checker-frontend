@@ -17,6 +17,7 @@ export class Search extends PureComponent {
     )
       .then((response) => {
         console.log(response);
+        this.props.productsCallback(response.data);
       })
       .catch((error) => {
         console.log(error);
